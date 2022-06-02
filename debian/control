@@ -1,0 +1,32 @@
+Source: amphp-sync
+Section: php
+Priority: optional
+Maintainer: Katharina Drexel <katharina.drexel@bfh.ch>
+Build-Depends:
+ debhelper-compat (= 13),
+ phpab,
+ pkg-php-tools,
+Standards-Version: 4.6.1
+Homepage: https://github.com/amphp/sync
+Vcs-Browser: https://github.com/amphp/sync
+Vcs-Git: https://github.com/amphp/sync.git
+Rules-Requires-Root: no
+
+Package: php-amphp-sync
+Architecture: all
+Depends:
+ ${misc:Depends},
+ ${phpcomposer:Debian-require},
+Suggests:
+ ${phpcomposer:Debian-suggest},
+Replaces:
+ ${phpcomposer:Debian-replace},
+Breaks:
+ ${phpcomposer:Debian-conflict},
+Provides:
+ ${phpcomposer:Debian-provide},
+Description: Synchronization primitives for PHP applications
+ Amp is a non-blocking concurrency framework for PHP. It provides an event loop,
+ promises and streams as a base for asynchronous programming.
+ .
+ Synchronization primitives for PHP applications and libraries using Amp.
